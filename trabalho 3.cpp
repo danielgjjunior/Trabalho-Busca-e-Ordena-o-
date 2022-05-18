@@ -86,7 +86,7 @@ void imprimeVetor(int v[], int n)
 {
     for(int i=0; i<n; i++)
     {
-        printf("%d ",v[i]);
+        printf("%d\t%d\n",i,v[i]);
 
     }
     printf("\n");
@@ -157,14 +157,16 @@ void menu(int *v){
 
         case 1:
             system("cls");
+
             printf("DIGITE A QUANTIDADE DE VALORES DO NOVO VETOR\n\n");
             scanf("%d",&n);
             printf("VETOR GERADO COM SUCESSO\n\n");
             v = (int *) malloc(n * sizeof(int));
                 for(i=0;i<n;i++){
-                v[i]=rand() % 100;
+                v[i]=rand();
                 }
                 verifica = true;
+                verificaOrdenacao = false;
             system("pause");
             system("cls");
             break;
